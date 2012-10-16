@@ -3,24 +3,24 @@
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 
-    <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" SRC="kdate.js"></SCRIPT>
-    <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" SRC="hebrew-calendar.js"></SCRIPT>
+    <SCRIPT type="text/javascript" LANGUAGE="JavaScript" SRC="kdate.js"></SCRIPT>
+    <SCRIPT type="text/javascript" LANGUAGE="JavaScript" SRC="hebrew-calendar.js"></SCRIPT>
 
+    <link rel="stylesheet" type="text/css" href="stylesheets/page.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/calendar.css" />
 
   </head>
 
   <body>
 
+    <h3>
+      JavaScript Hebrew Calendar
+    </h3>
 
-    <FORM id="calendar-form" NAME="calendar_control">
-      <h3>
-        Javascript Hebrew Calendar
-      </h3>
-      <br>
+    <form id="calendar-form">
 
-      <INPUT id="prev-month" TYPE="button" NAME="prevbutton" VALUE="<">
-      <select id="month" NAME="month">
+      <input id="prev-month" type="button" value="<" />
+      <select id="month">
         <option>January</option>
         <option>February</option>
         <option>March</option>
@@ -34,19 +34,19 @@
         <option>November</option>
         <option>December</option>
       </select>
-      <INPUT id="next-month" TYPE="button" NAME="nextbutton" VALUE=">">
+      <input id="next-month" type="button" value=">" />
 
       &nbsp&nbsp
-      <INPUT id="prev-year" TYPE="button" NAME="prevYbutton" VALUE="<">
-      <input id="year" NAME="yr" TYPE="text" VALUE=" " SIZE=4 >
-      <INPUT id="next-year" TYPE="button" NAME="nextYbutton" VALUE=">">
+      <input id="prev-year" type="button" value="<">
+      <input id="year" NAME="yr" type="text" value=" " >
+      <input id="next-year" type="button" value=">">
 
       &nbsp&nbsp
-      <input id="today" TYPE="button" NAME="currbutton" VALUE=" Today " />
+      <input id="today" type="button" value=" Today " />
       &nbsp&nbsp
 
       Holidays:
-      <select id="holidays" NAME="holidays">
+      <select id="holidays">
         <option>Jewish</option>
         <option>Civil</option>
         <option>All</option>
@@ -54,9 +54,12 @@
       </select>
 
 
-      <div id="calendar-container">
+    </form>
 
-      </div>
+    <div id="calendar-container">
+
+    </div>
+
 
   </body>
 </html>

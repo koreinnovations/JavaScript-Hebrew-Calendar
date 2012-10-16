@@ -1,10 +1,15 @@
 $englishColor: darkgreen;
 $hebrewColor: darkblue;
 
+#calendar-form {
+  #year {
+    width: 45px;
+  }
+}
+
 table.calendar {
   
   border-collapse: collapse;
-  font-family: arial;
   
   
   th, td {
