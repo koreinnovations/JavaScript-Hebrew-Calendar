@@ -1,5 +1,5 @@
-$englishColor: darkgreen;
-$hebrewColor: darkblue;
+$englishColor: #333;
+$hebrewColor: #003;
 
 #calendar-form {
   #year {
@@ -73,27 +73,20 @@ table.calendar {
           background-color: #d0c0c0;
         }
         
-        table.cell-contents {
-          border-collapse: collapse;
-          
-          td {
-            border: 0;
-            height: auto;
-            vertical-align: top;
-            
-            &.english {
-              color: $englishColor;
-            }
-            &.hebrew {
-              color: $hebrewColor;
-              text-align: right;
-            }
+        div.cell-contents {
+          div.english {
+            color: $englishColor;
+            float: left;
+          }
+          div.hebrew {
+            color: $hebrewColor;
+            float: right;
+          }
+          div.events {
+            font-size: 0.85em;
           }
         }
         
-        .events {
-          font-size: 0.85em;
-        }
         
       }
       

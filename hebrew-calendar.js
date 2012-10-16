@@ -38,7 +38,7 @@ $(document).ready(function() {
   var todayButton = $('#today', calendarForm);
 
   var isMobile = function() {
-  	return $('body').is('.mobile');
+    return $('body').is('.mobile');
   }; 
 
   var initialize = function() {
@@ -203,8 +203,12 @@ $(document).ready(function() {
     else
       hebSpan = start + ' / ' + end
 
+    var container = $('<div id="calendar-wrapper"></div>');
 
-    var table = $('<table class="calendar"></table>');
+    var table1 = $('<table class="calendar table-header"></table>');
+    var table2 = $('<table class="calendar table-body"></table>');
+    var eventsList = $('<div id="calendar-list"></div>');
+    var eventsListContent = '';
     
     var tHead = $('<thead></thead>');
     var tBody = $('<tbody></tbody>');
@@ -237,21 +241,9 @@ $(document).ready(function() {
       
       var weekRow = $('<tr class="week-row row-' + row + '"></tr>');
       
-      for (col = 1; col <= 7; col++)  {
+      for (var col = 1; col <= 7; col++)  {
         
         var weekCell = $('<td></td>');
-        
-        var cellClass = "";
-        if((cDay == tday) && (parms[3] == (tmonth+1)) && (parms[4] == tyear))
-          cellClass = "current-day";
-        else if (moed != "")
-          cellClass = "holiday";
-        else if (holiday != "") {
-          cellClass = "civil-holiday";
-        }
-          
-        weekCell.addClass(cellClass);
-        
         
 
         // convert civil date to hebrew
@@ -265,35 +257,66 @@ $(document).ready(function() {
           
         }
         else {
-
+          
+          
           var moed = "";
           if(jewishHolidays)
             moed = moadim(cDay, cMonth, cYear, hebDay, hMonth, col);
           var holiday = "";
           if(civilHolidays)
             holiday = holidays(cDay, cMonth, cYear);
+          
+          var cellClass = "";
+          if((cDay == tday) && (parms[3] == (tmonth+1)) && (parms[4] == tyear))
+            cellClass = "current-day";
+          else if (moed != "")
+            cellClass = "holiday";
+          else if (holiday != "") {
+            cellClass = "civil-holiday";
+          }
+          
+          weekCell.addClass(cellClass);
+
 
 
           var cellContents = '';
           // assemble the contents of our day cell
-          cellContents +=   '<table class="cell-contents">';
-          cellContents +=     '<tr>';
-          cellContents +=       '<td class="english">';
+          cellContents += '<div class="cell-contents">';
+          cellContents +=       '<div class="english">';
           cellContents +=           cDay;
-          cellContents +=       '</td>';
-          cellContents +=       '<td class="hebrew">';
+          cellContents +=       '</div>';
+          cellContents +=       '<div class="hebrew">';
           cellContents +=           hebDay;
-          cellContents +=       '</td>';
-          cellContents +=     '</tr>';
-          cellContents +=   '</table>';
+          cellContents +=       '</div>';
           
-          cellContents += '<div class="events">';
+          var eventDetail = '';
           if (moed != "")
-            cellContents += moed;
+            eventDetail += moed;
           if (moed != "" && holiday != "")
-            cellContents += '<br>';
+            eventDetail += '<br>';
           if (holiday != "")
-            cellContents += holiday;
+            eventDetail += holiday;
+            
+          if (!isMobile()) {
+            cellContents += '<div class="events">';
+            cellContents += eventDetail;
+            cellContents += '</div>';
+          }
+          else {
+            if (eventDetail.length > 0) {
+              eventsListContent += '<div class="event-wrapper ' + cellClass + '">';
+              eventsListContent += '<div class="date">';
+              eventsListContent += civMonth[cMonth] + ' ' + cDay;
+              eventsListContent += ' / ';
+              eventsListContent += hebMonth[hMonth + 1] + ' ' + hebDay;
+              eventsListContent += '</div>';
+              eventsListContent += '<div class="event-detail">';
+              eventsListContent += eventDetail;
+              eventsListContent += '</div>';
+              eventsListContent += '</div>';
+            }
+          }
+          
           cellContents += '</div>';
           
           weekCell.html(cellContents);
@@ -315,9 +338,16 @@ $(document).ready(function() {
         break;
     }
     
-    table.append(tHead).append(tBody);
+    table1.append(tHead);
+    table2.append(tBody);
     
-    return table;
+    eventsList.html(eventsListContent);
+    
+    container.append(table1);
+    container.append(table2);
+    container.append(eventsList);
+    
+    return container;
   }
   
   var getSelectedYear = function() {

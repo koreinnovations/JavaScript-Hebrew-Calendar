@@ -10,44 +10,146 @@ body {
 /* line 11, ../sass/mobile.scss */
 table.calendar {
   width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px;
 }
-/* line 14, ../sass/mobile.scss */
+/* line 16, ../sass/mobile.scss */
+table.calendar.table-header {
+  background: #e2e2e4;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #e2e2e4 0%, #cccbd0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e2e2e4), color-stop(100%, #cccbd0));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e2e2e4 0%, #cccbd0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e2e2e4 0%, #cccbd0 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e2e2e4 0%, #cccbd0 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #e2e2e4 0%, #cccbd0 100%);
+  /* W3C */
+}
+/* line 26, ../sass/mobile.scss */
+table.calendar.table-body {
+  background: #e2e2e4;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #e2e2e4 0%, #cccbd0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e2e2e4), color-stop(100%, #cccbd0));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e2e2e4 0%, #cccbd0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e2e2e4 0%, #cccbd0 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e2e2e4 0%, #cccbd0 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #e2e2e4 0%, #cccbd0 100%);
+  /* W3C */
+}
+/* line 36, ../sass/mobile.scss */
 table.calendar th, table.calendar td {
   width: 14.28%;
-  height: 85px;
+  height: 40px;
   padding: 0;
+  border-left: 1px solid #eee;
+  border-top: 1px solid #eee;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
 }
-/* line 22, ../sass/mobile.scss */
+/* line 48, ../sass/mobile.scss */
 table.calendar thead tr.month-header {
   font-size: 1.3em;
 }
-/* line 27, ../sass/mobile.scss */
+/* line 51, ../sass/mobile.scss */
+table.calendar thead tr.month-header th {
+  border: 0;
+}
+/* line 54, ../sass/mobile.scss */
 table.calendar thead tr.month-header th span {
   display: block;
-  padding: 8px 20px;
+  padding: 3px 20px;
 }
-/* line 31, ../sass/mobile.scss */
+/* line 58, ../sass/mobile.scss */
 table.calendar thead tr.month-header th .english {
   font-size: 1.1em;
   float: none;
   margin: 0;
 }
-/* line 36, ../sass/mobile.scss */
+/* line 63, ../sass/mobile.scss */
 table.calendar thead tr.month-header th .hebrew {
   font-size: 0.9em;
   float: none;
   margin: 0;
 }
-/* line 45, ../sass/mobile.scss */
+/* line 72, ../sass/mobile.scss */
 table.calendar thead tr.days-header td {
   height: 25px;
+  border: 0;
+  font-size: 0.8em;
+  color: #333;
+  font-weight: bold;
 }
-/* line 66, ../sass/mobile.scss */
-table.calendar tbody tr.week-row td table.cell-contents {
-  width: 100%;
+/* line 90, ../sass/mobile.scss */
+table.calendar tbody tr.week-row td {
+  position: relative;
 }
-/* line 68, ../sass/mobile.scss */
-table.calendar tbody tr.week-row td table.cell-contents td {
-  width: auto;
-  padding: 4px;
+/* line 93, ../sass/mobile.scss */
+table.calendar tbody tr.week-row td.current-day {
+  background-color: #1980e5;
+  -webkit-box-shadow: inset 0 0 4px #000000;
+  border: 1px solid #666;
+}
+/* line 98, ../sass/mobile.scss */
+table.calendar tbody tr.week-row td.current-day div {
+  color: #fff !important;
+  text-shadow: 1px 1px 1px #333;
+}
+/* line 103, ../sass/mobile.scss */
+table.calendar tbody tr.week-row td.holiday {
+  background: #cfe7fa;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #cfe7fa 0%, #6393c1 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cfe7fa), color-stop(100%, #6393c1));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #cfe7fa 0%, #6393c1 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #cfe7fa 0%, #6393c1 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #cfe7fa 0%, #6393c1 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #cfe7fa 0%, #6393c1 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 );
+  /* IE6-9 */
+}
+/* line 117, ../sass/mobile.scss */
+table.calendar tbody tr.week-row td div.cell-contents {
+  font-size: 0.85em;
+}
+/* line 120, ../sass/mobile.scss */
+table.calendar tbody tr.week-row td div.cell-contents div.english {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+/* line 125, ../sass/mobile.scss */
+table.calendar tbody tr.week-row td div.cell-contents div.hebrew {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+}
+/* line 130, ../sass/mobile.scss */
+table.calendar tbody tr.week-row td div.cell-contents div.events {
+  font-size: 0.85em;
+}
+
+/* line 144, ../sass/mobile.scss */
+#calendar-list .event-wrapper {
+  margin: 10px 0;
+}
+/* line 147, ../sass/mobile.scss */
+#calendar-list .event-wrapper .date {
+  font-weight: bold;
 }
