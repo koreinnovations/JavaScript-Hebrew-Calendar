@@ -1,0 +1,80 @@
+/* line 4, ../sass/calendar.scss */
+table.calendar {
+  border-collapse: collapse;
+  font-family: arial;
+}
+/* line 10, ../sass/calendar.scss */
+table.calendar th, table.calendar td {
+  width: 80px;
+  height: 85px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+/* line 19, ../sass/calendar.scss */
+table.calendar thead tr.month-header {
+  font-size: 1.3em;
+}
+/* line 24, ../sass/calendar.scss */
+table.calendar thead tr.month-header th span {
+  display: block;
+  padding: 8px 20px;
+}
+/* line 28, ../sass/calendar.scss */
+table.calendar thead tr.month-header th .english {
+  color: darkgreen;
+  font-size: 1.1em;
+  float: left;
+  margin-left: 30px;
+}
+/* line 34, ../sass/calendar.scss */
+table.calendar thead tr.month-header th .hebrew {
+  color: darkblue;
+  font-size: 0.9em;
+  float: right;
+  margin-right: 30px;
+}
+/* line 44, ../sass/calendar.scss */
+table.calendar thead tr.days-header td {
+  height: 25px;
+  color: darkred;
+  text-align: center;
+}
+/* line 58, ../sass/calendar.scss */
+table.calendar tbody tr.week-row td {
+  vertical-align: top;
+}
+/* line 61, ../sass/calendar.scss */
+table.calendar tbody tr.week-row td.current-day {
+  background-color: #c0d0c0;
+}
+/* line 64, ../sass/calendar.scss */
+table.calendar tbody tr.week-row td.holiday {
+  background-color: #d0c0d0;
+}
+/* line 67, ../sass/calendar.scss */
+table.calendar tbody tr.week-row td.civil-holiday {
+  background-color: #d0c0c0;
+}
+/* line 71, ../sass/calendar.scss */
+table.calendar tbody tr.week-row td table.cell-contents {
+  border-collapse: collapse;
+}
+/* line 74, ../sass/calendar.scss */
+table.calendar tbody tr.week-row td table.cell-contents td {
+  border: 0;
+  height: auto;
+  vertical-align: top;
+}
+/* line 79, ../sass/calendar.scss */
+table.calendar tbody tr.week-row td table.cell-contents td.english {
+  color: darkgreen;
+}
+/* line 82, ../sass/calendar.scss */
+table.calendar tbody tr.week-row td table.cell-contents td.hebrew {
+  color: darkblue;
+  text-align: right;
+}
+/* line 89, ../sass/calendar.scss */
+table.calendar tbody tr.week-row td .events {
+  font-size: 0.85em;
+}

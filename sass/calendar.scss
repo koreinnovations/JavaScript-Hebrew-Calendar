@@ -1,0 +1,99 @@
+$englishColor: darkgreen;
+$hebrewColor: darkblue;
+
+table.calendar {
+  
+  border-collapse: collapse;
+  font-family: arial;
+  
+  
+  th, td {
+    width: 80px;
+    height: 85px;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  thead {
+    
+    tr.month-header {
+      font-size: 1.3em;
+      
+      th {
+        
+        span {
+          display: block;
+          padding: 8px 20px;
+        }
+        .english {
+          color: $englishColor;
+          font-size: 1.1em;
+          float: left;
+          margin-left: 30px;
+        }
+        .hebrew {
+          color: $hebrewColor;
+          font-size: 0.9em;
+          float: right;
+          margin-right: 30px;
+        }
+      }
+    }
+    
+    tr.days-header {
+      td {
+        height: 25px;
+        color: darkred;
+        text-align: center;
+      }
+    }
+    
+    
+  }
+  
+  tbody {
+    
+    tr.week-row {
+      
+      td {
+        vertical-align: top;
+        
+        &.current-day {
+          background-color: #c0d0c0;
+        }
+        &.holiday {
+          background-color: #d0c0d0;
+        }
+        &.civil-holiday {
+          background-color: #d0c0c0;
+        }
+        
+        table.cell-contents {
+          border-collapse: collapse;
+          
+          td {
+            border: 0;
+            height: auto;
+            vertical-align: top;
+            
+            &.english {
+              color: $englishColor;
+            }
+            &.hebrew {
+              color: $hebrewColor;
+              text-align: right;
+            }
+          }
+        }
+        
+        .events {
+          font-size: 0.85em;
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+}

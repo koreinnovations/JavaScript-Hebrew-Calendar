@@ -1,0 +1,62 @@
+<html>
+  <head>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+    <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" SRC="kdate.js"></SCRIPT>
+    <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" SRC="hebrew-calendar.js"></SCRIPT>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/calendar.css" />
+
+  </head>
+
+  <body>
+
+
+    <FORM id="calendar-form" NAME="calendar_control">
+      <h3>
+        Javascript Hebrew Calendar
+      </h3>
+      <br>
+
+      <INPUT id="prev-month" TYPE="button" NAME="prevbutton" VALUE="<">
+      <select id="month" NAME="month">
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+      <INPUT id="next-month" TYPE="button" NAME="nextbutton" VALUE=">">
+
+      &nbsp&nbsp
+      <INPUT id="prev-year" TYPE="button" NAME="prevYbutton" VALUE="<">
+      <input id="year" NAME="yr" TYPE="text" VALUE=" " SIZE=4 >
+      <INPUT id="next-year" TYPE="button" NAME="nextYbutton" VALUE=">">
+
+      &nbsp&nbsp
+      <input id="today" TYPE="button" NAME="currbutton" VALUE=" Today " />
+      &nbsp&nbsp
+
+      Holidays:
+      <select id="holidays" NAME="holidays">
+        <option>Jewish</option>
+        <option>Civil</option>
+        <option>All</option>
+        <option>None</option>
+      </select>
+
+
+      <div id="calendar-container">
+
+      </div>
+
+  </body>
+</html>
