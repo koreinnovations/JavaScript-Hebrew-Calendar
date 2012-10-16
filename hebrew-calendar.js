@@ -36,7 +36,10 @@ $(document).ready(function() {
   var prevYearButton = $('#prev-year', calendarForm);
   var nextYearButton = $('#next-year', calendarForm);
   var todayButton = $('#today', calendarForm);
-  
+
+  var isMobile = function() {
+  	return $('body').is('.mobile');
+  }; 
 
   var initialize = function() {
     

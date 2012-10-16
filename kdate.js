@@ -30,7 +30,7 @@ var civMonth = new makeArray(
   'July', 'August', 'September', 'October', 'November', 'December');
 
 var weekDay = new makeArray(
-  'Sun', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Shabbat');
+  'S', 'M', 'T', 'W', 'Th', 'F', 'Sh');
 
 function Gauss(year) {
   var a,b,c;
