@@ -42,6 +42,22 @@ table.calendar {
           float: right;
           margin-right: 30px;
         }
+        
+        a {
+          cursor: pointer;
+          text-decoration: none;
+          color: #333;
+        }
+        #previous-month {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+        #next-month {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
       }
     }
     

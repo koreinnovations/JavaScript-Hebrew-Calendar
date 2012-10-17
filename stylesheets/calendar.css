@@ -37,39 +37,57 @@ table.calendar thead tr.month-header th .hebrew {
   float: right;
   margin-right: 30px;
 }
-/* line 49, ../sass/calendar.scss */
+/* line 46, ../sass/calendar.scss */
+table.calendar thead tr.month-header th a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+}
+/* line 51, ../sass/calendar.scss */
+table.calendar thead tr.month-header th #previous-month {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+/* line 56, ../sass/calendar.scss */
+table.calendar thead tr.month-header th #next-month {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+/* line 65, ../sass/calendar.scss */
 table.calendar thead tr.days-header td {
   height: 25px;
   color: darkred;
   text-align: center;
 }
-/* line 63, ../sass/calendar.scss */
+/* line 79, ../sass/calendar.scss */
 table.calendar tbody tr.week-row td {
   vertical-align: top;
 }
-/* line 66, ../sass/calendar.scss */
+/* line 82, ../sass/calendar.scss */
 table.calendar tbody tr.week-row td.current-day {
   background-color: #c0d0c0;
 }
-/* line 69, ../sass/calendar.scss */
+/* line 85, ../sass/calendar.scss */
 table.calendar tbody tr.week-row td.holiday {
   background-color: #d0c0d0;
 }
-/* line 72, ../sass/calendar.scss */
+/* line 88, ../sass/calendar.scss */
 table.calendar tbody tr.week-row td.civil-holiday {
   background-color: #d0c0c0;
 }
-/* line 77, ../sass/calendar.scss */
+/* line 93, ../sass/calendar.scss */
 table.calendar tbody tr.week-row td div.cell-contents div.english {
   color: #333333;
   float: left;
 }
-/* line 81, ../sass/calendar.scss */
+/* line 97, ../sass/calendar.scss */
 table.calendar tbody tr.week-row td div.cell-contents div.hebrew {
   color: #000033;
   float: right;
 }
-/* line 85, ../sass/calendar.scss */
+/* line 101, ../sass/calendar.scss */
 table.calendar tbody tr.week-row td div.cell-contents div.events {
   font-size: 0.85em;
 }
