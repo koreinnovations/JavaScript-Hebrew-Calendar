@@ -100,17 +100,7 @@ table.calendar {
       td {
         position: relative;
         
-        &.current-day {
-          background-color: #1980e5;
-          -webkit-box-shadow: inset 0 0 4px #000000;
-          border: 1px solid #666;
-          
-          div {
-            color: #fff !important;
-        text-shadow: 1px 1px 1px #333;
-          }
-        }
-        &.holiday {
+        &.with-data {
           background: #cfe7fa; /* Old browsers */
           background: -moz-linear-gradient(top,  #cfe7fa 0%, #6393c1 100%); /* FF3.6+ */
           background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cfe7fa), color-stop(100%,#6393c1)); /* Chrome,Safari4+ */
@@ -121,7 +111,17 @@ table.calendar {
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 ); /* IE6-9 */
           
         }
-        &.civil-holiday {
+
+        &.current-day {
+          background: none;
+          background-color: #1980e5;
+          -webkit-box-shadow: inset 0 0 4px #000000;
+          border: 1px solid #666;
+          
+          div {
+            color: #fff !important;
+        text-shadow: 1px 1px 1px #333;
+          }
         }
         
         div.cell-contents {
