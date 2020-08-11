@@ -15,4 +15,4 @@ This HTML and JavaScript-based app is a modernization of the KaluachJS Hebrew ca
 
 **Demo**
 
-Open the `example.js` file to use a working demo of this library.
+Open the `example.html` file to use a working demo of this library.
